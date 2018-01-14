@@ -93,46 +93,54 @@
     }
 }
 </code></pre><ul>
-<li><p>返回值为3</p>
-<h5 id="使用-javap-verbose-Test1-class-查看汇编代码"><a href="#使用-javap-verbose-Test1-class-查看汇编代码" class="headerlink" title="使用 javap -verbose Test1.class 查看汇编代码"></a>使用 javap -verbose Test1.class 查看汇编代码</h5><p>  public static void main(java.lang.String[]);<br>  descriptor: ([Ljava/lang/String;)V<br>  flags: ACC_PUBLIC, ACC_STATIC<br>  Code:<br>  stack=2, locals=1, args_size=1</p>
-<pre><code>0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+<li>返回值为3</li>
+</ul>
+<h5 id="使用-javap-verbose-Test1-class-查看汇编代码"><a href="#使用-javap-verbose-Test1-class-查看汇编代码" class="headerlink" title="使用 javap -verbose Test1.class 查看汇编代码"></a>使用 javap -verbose Test1.class 查看汇编代码</h5><pre><code>public static void main(java.lang.String[]);
+descriptor: ([Ljava/lang/String;)V
+flags: ACC_PUBLIC, ACC_STATIC
+Code:
+stack=2, locals=1, args_size=1
+0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
 3: invokestatic  #3                  // Method t1:()I
 6: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
 9: return
-</code></pre><p>  LineNumberTable:</p>
-<pre><code>line 8: 0
+LineNumberTable:
+line 8: 0
 line 9: 9
-</code></pre><p>  public static int t1();<br>  descriptor: ()I<br>  flags: ACC_PUBLIC, ACC_STATIC<br>  Code:<br>  stack=2, locals=3, args_size=0</p>
-<pre><code>0: iconst_0            //加载0到栈顶
-1: istore_0            //将栈顶数据(0)，保存到本地变量表的第0个slot
-2: iconst_1            //加载1到栈顶
-3: iconst_0            //加载0到栈顶
-4: idiv                //执行除法操作，将除法结果保存到栈顶
-5: istore_0            //将栈顶数据(除的结果)，保存到本地变量表的第0个slot
-6: iconst_3            //进入finally代码块执行  加载3到栈顶
-7: istore_0            //将栈顶数据3保存到第0个slot
-8: goto          24     //-----&gt;跳到第24行执行
-11: astore_1            //进入catach代码块，将异常引用类型保存到第1个slot中
-12: iconst_2            //加载2到栈顶
-13: istore_0            //保存栈顶值（2）到第0个slot中
-14: iconst_3            //进入finally代码块执行  加载3到栈顶
-15: istore_0            //将栈顶数据3保存到第0个slot
-16: goto          24    //-----&gt;跳到第24行执行
-19: astore_2            //当catch块代码出现异常是，进入该行执行, 将异常引用类型保存到第2个slot中
-20: iconst_3            //加载3到栈顶
-21: istore_0            //将栈顶数据3保存到第0个slot
-22: aload_2            //将slot2中的异常信息引用加载到栈顶
-23: athrow            //抛出异常,方法无返回值
-24: iload_0            //将第0个slot中的值加载到栈顶，在出现异常(14行)和不出现异常(6行)的情况下slot0中的值都是3，因此iload_0将3加载到栈顶
-25: ireturn            //返回栈顶操作数
-Exception table:
-from    to  target type
-   2     6    11   Class java/lang/Exception //第2~6行出现异常Exception时，需要跳到11行执行
-   2     6    19   any    //第2~6行出现任其他何异常情况下都需要执行第19行
-  11    14    19   any    //第11~14行出现任何异常情况下都需要执行第19行
-</code></pre></li>
-</ul>
-<h2 id="2、try-return-catch-finally-return"><a href="#2、try-return-catch-finally-return" class="headerlink" title="2、try{ return; }catch(){} finally{} return"></a>2、try{ return; }catch(){} finally{} return</h2><pre><code>public static  int t1() {
+
+public static int t1();
+descriptor: ()I
+flags: ACC_PUBLIC, ACC_STATIC
+Code:
+stack=2, locals=3, args_size=0
+    0: iconst_0            //加载0到栈顶
+    1: istore_0            //将栈顶数据(0)，保存到本地变量表的第0个slot
+    2: iconst_1            //加载1到栈顶
+    3: iconst_0            //加载0到栈顶
+    4: idiv                //执行除法操作，将除法结果保存到栈顶
+    5: istore_0            //将栈顶数据(除的结果)，保存到本地变量表的第0个slot
+    6: iconst_3            //进入finally代码块执行  加载3到栈顶
+    7: istore_0            //将栈顶数据3保存到第0个slot
+    8: goto          24     //-----&gt;跳到第24行执行
+    11: astore_1            //进入catach代码块，将异常引用类型保存到第1个slot中
+    12: iconst_2            //加载2到栈顶
+    13: istore_0            //保存栈顶值（2）到第0个slot中
+    14: iconst_3            //进入finally代码块执行  加载3到栈顶
+    15: istore_0            //将栈顶数据3保存到第0个slot
+    16: goto          24    //-----&gt;跳到第24行执行
+    19: astore_2            //当catch块代码出现异常是，进入该行执行, 将异常引用类型保存到第2个slot中
+    20: iconst_3            //加载3到栈顶
+    21: istore_0            //将栈顶数据3保存到第0个slot
+    22: aload_2            //将slot2中的异常信息引用加载到栈顶
+    23: athrow            //抛出异常,方法无返回值
+    24: iload_0            //将第0个slot中的值加载到栈顶，在出现异常(14行)和不出现异常(6行)的情况下slot0中的值都是3，因此iload_0将3加载到栈顶
+    25: ireturn            //返回栈顶操作数
+    Exception table:
+    from    to  target type
+       2     6    11   Class java/lang/Exception //第2~6行出现异常Exception时，需要跳到11行执行
+       2     6    19   any    //第2~6行出现任其他何异常情况下都需要执行第19行
+      11    14    19   any    //第11~14行出现任何异常情况下都需要执行第19行
+</code></pre><h2 id="2、try-return-catch-finally-return"><a href="#2、try-return-catch-finally-return" class="headerlink" title="2、try{ return; }catch(){} finally{} return"></a>2、try{ return; }catch(){} finally{} return</h2><pre><code>public static  int t1() {
     int i=0;
     try {
         //System.out.println(&quot;try&quot;);
@@ -186,7 +194,7 @@ stack=2, locals=3, args_size=0
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/14/从汇编中看 try catch finally 中的return/" data-id="cjcedbtbe0002xgbjrshbij1d" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/14/从汇编中看 try catch finally 中的return/" data-id="cjcedhoqn0002qwbjfr4fwoxn" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -223,7 +231,7 @@ stack=2, locals=3, args_size=0
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/11/导出数据库为word代码结构/" data-id="cjcedbtbg0003xgbjabnt4zh1" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/11/导出数据库为word代码结构/" data-id="cjcedhoqo0003qwbjfex4xnip" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -259,7 +267,7 @@ stack=2, locals=3, args_size=0
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/10/test-my-site/" data-id="cjcedbtb90001xgbje63i2y8q" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/10/test-my-site/" data-id="cjcedhoqh0001qwbjx2upsof9" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -304,7 +312,7 @@ stack=2, locals=3, args_size=0
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/10/hello-world/" data-id="cjcedbtb40000xgbjy72y0coc" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/10/hello-world/" data-id="cjcedhoqb0000qwbj6r8gg440" class="article-share-link">Teilen</a>
       
       
     </footer>
