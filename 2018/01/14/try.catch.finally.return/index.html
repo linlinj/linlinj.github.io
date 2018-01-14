@@ -7,12 +7,16 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="#从汇编中看 try catch finally 中的return# ##1、try{} catch(){}finally{} return ##    public class Test1 {        public static void main(String args[]) {            System.out.println(t1());        }        p">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/14/try.catch.finally.return/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#从汇编中看 try catch finally 中的return# ##1、try{} catch(){}finally{} return ##    public class Test1 {        public static void main(String args[]) {            System.out.println(t1());        }        p">
+<meta property="og:updated_time" content="2018-01-14T05:41:27.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#从汇编中看 try catch finally 中的return# ##1、try{} catch(){}finally{} return ##    public class Test1 {        public static void main(String args[]) {            System.out.println(t1());        }        p">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-try.catch.finally.return" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-try.catch.finally.return" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/14/try.catch.finally.return/" class="article-date">
   <time datetime="2018-01-14T02:48:44.322Z" itemprop="datePublished">2018-01-14</time>
@@ -178,129 +180,19 @@ stack=2, locals=3, args_size=0
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-导出数据库为word代码结构" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/11/导出数据库为word代码结构/" class="article-date">
-  <time datetime="2018-01-11T02:49:14.964Z" itemprop="datePublished">2018-01-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明介绍"><a href="#说明介绍" class="headerlink" title="说明介绍"></a>说明介绍</h2><p>databasedoc是一个简易的将数据库的整个库表的元信息（表信息、字段信息）自动导出到word文档中，用户可以简单的配置就可生成数据库字典。</p>
-<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><ul>
-<li>使用刚接触到的Springboot架构了控制层、服务层、dao层的层级结构；          </li>
-<li>配置使用阿里巴巴的Druid数据连接池；    </li>
-<li>与word的交互则使用apache开源的poi工具；</li>
-<li>日志使用logback<br><img src="https://i.imgur.com/pdTLFB9.png" alt="">                                                                                                                                                                    <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2></li>
-</ul>
-<ol>
-<li>运行方式<br>java -jar D:/datamining-0.0.1-SNAPSHOT.jar spring.config.location=”D:/application.yml”<br>其中：<br> 参数D:/datamining-0.0.1-SNAPSHOT.jar为jar包存放位置；<br> 参数spring.config.location为外部application配置文件存放的地方；   </li>
-<li>application配置文件说明<br>可将代码中的application.yml拷贝至外部，并修改其中的部分参数，说明如下：<br>1） <strong>spring.datasource.url</strong>:  导出数据源的url地址<br>2） <strong>spring.datasource.driverClassName</strong>:  导出数据源的驱动名称<br>3） <strong>spring.datasource.username</strong>:  导出数据源数据库用户名<br>4） <strong>spring.datasource.password</strong>:  导出数据源数据库密码<br>5） <strong>targetPath</strong>:  目标word存放路径和名称<br>不同数据源的数据连接配置不同，大家可以根据阿里巴巴的Druid数据连接不同数据源来配置，示例如下：<br>1） mysql数据库<br><strong>spring.datasource.url</strong>:  jdbc:mariadb://ip:port/base?autoReconnect=true&amp;autoReconnectForPools=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true<br><strong>spring.datasource.driverClassName</strong>:  org.mariadb.jdbc.Driver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password<br>2） oracle数据库<br><strong>spring.datasource.url</strong>:  jdbc:oracle:thin:@ip:port:sid<br><strong>spring.datasource.driverClassName</strong>:  oracle.jdbc.driver.OracleDriver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password<br>3） sqlserver数据库<br><strong>spring.datasource.url</strong>:  jdbc:sqlserver://ip:port;DatabaseName=base<br><strong>spring.datasource.driverClassName</strong>:  com.microsoft.sqlserver.jdbc.SQLServerDriver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password    <h2 id="word效果"><a href="#word效果" class="headerlink" title="word效果"></a>word效果</h2><img src="https://i.imgur.com/rujaxnW.png" alt=""></li>
-</ol>
+  
+    <a href="/2018/01/11/导出数据库为word代码结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/11/导出数据库为word代码结构/" data-id="cjcecz3ln00039cbjkkm0iovy" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-test-my-site" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/10/test-my-site/" class="article-date">
-  <time datetime="2018-01-10T08:50:00.000Z" itemprop="datePublished">2018-01-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/10/test-my-site/">test_my_site</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/10/test-my-site/" data-id="cjcecz3j900019cbjs9b2u0eu" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/10/hello-world/" class="article-date">
-  <time datetime="2018-01-10T08:39:30.330Z" itemprop="datePublished">2018-01-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/10/hello-world/" data-id="cjcecz3j300009cbjloxwt0q1" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
