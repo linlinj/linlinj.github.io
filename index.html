@@ -208,48 +208,11 @@ stack=2, locals=3, args_size=0
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/14/从汇编中看 try catch finally 中的return/" data-id="cjcehiroc00008obj6l15k6di" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/14/从汇编中看 try catch finally 中的return/" data-id="cjcehqioj00008cbjqpt9vj68" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-导出数据库为word代码结构" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/11/导出数据库为word代码结构/" class="article-date">
-  <time datetime="2018-01-11T02:49:14.964Z" itemprop="datePublished">2018-01-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明介绍"><a href="#说明介绍" class="headerlink" title="说明介绍"></a>说明介绍</h2><p>databasedoc是一个简易的将数据库的整个库表的元信息（表信息、字段信息）自动导出到word文档中，用户可以简单的配置就可生成数据库字典。</p>
-<h2 id="使用技术"><a href="#使用技术" class="headerlink" title="使用技术"></a>使用技术</h2><ul>
-<li>使用刚接触到的Springboot架构了控制层、服务层、dao层的层级结构；          </li>
-<li>配置使用阿里巴巴的Druid数据连接池；    </li>
-<li>与word的交互则使用apache开源的poi工具；</li>
-<li>日志使用logback<br><img src="https://i.imgur.com/pdTLFB9.png" alt="">                                                                                                                                                                    <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2></li>
-</ul>
-<ol>
-<li>运行方式<br>java -jar D:/datamining-0.0.1-SNAPSHOT.jar spring.config.location=”D:/application.yml”<br>其中：<br> 参数D:/datamining-0.0.1-SNAPSHOT.jar为jar包存放位置；<br> 参数spring.config.location为外部application配置文件存放的地方；   </li>
-<li>application配置文件说明<br>可将代码中的application.yml拷贝至外部，并修改其中的部分参数，说明如下：<br>1） <strong>spring.datasource.url</strong>:  导出数据源的url地址<br>2） <strong>spring.datasource.driverClassName</strong>:  导出数据源的驱动名称<br>3） <strong>spring.datasource.username</strong>:  导出数据源数据库用户名<br>4） <strong>spring.datasource.password</strong>:  导出数据源数据库密码<br>5） <strong>targetPath</strong>:  目标word存放路径和名称<br>不同数据源的数据连接配置不同，大家可以根据阿里巴巴的Druid数据连接不同数据源来配置，示例如下：<br>1） mysql数据库<br><strong>spring.datasource.url</strong>:  jdbc:mariadb://ip:port/base?autoReconnect=true&amp;autoReconnectForPools=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true<br><strong>spring.datasource.driverClassName</strong>:  org.mariadb.jdbc.Driver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password<br>2） oracle数据库<br><strong>spring.datasource.url</strong>:  jdbc:oracle:thin:@ip:port:sid<br><strong>spring.datasource.driverClassName</strong>:  oracle.jdbc.driver.OracleDriver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password<br>3） sqlserver数据库<br><strong>spring.datasource.url</strong>:  jdbc:sqlserver://ip:port;DatabaseName=base<br><strong>spring.datasource.driverClassName</strong>:  com.microsoft.sqlserver.jdbc.SQLServerDriver<br><strong>spring.datasource.username</strong>:  username<br><strong>spring.datasource.password</strong>:  password    <h2 id="word效果"><a href="#word效果" class="headerlink" title="word效果"></a>word效果</h2><img src="https://i.imgur.com/rujaxnW.png" alt=""></li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/11/导出数据库为word代码结构/" data-id="cjcehiroh00018objivodb3wq" class="article-share-link">Teilen</a>
-      
-      
     </footer>
   </div>
   
@@ -310,10 +273,6 @@ stack=2, locals=3, args_size=0
         
           <li>
             <a href="/2018/01/14/从汇编中看 try catch finally 中的return/">从汇编中看 try catch finally 中的return</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/11/导出数据库为word代码结构/">(no title)</a>
           </li>
         
       </ul>
